@@ -1,5 +1,4 @@
 public class BeerSong {
-    //beersong
     public static void main(String[] args) {
         int beer = 99;
         String word;
@@ -19,7 +18,6 @@ public class BeerSong {
                 System.out.println(beer + " " + word + " berea pe raft ");
             } else {
                 System.out.println(" nu sunt sticle pe raft ");
-                //ssssss
             }
         }
     }
