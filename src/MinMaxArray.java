@@ -11,7 +11,21 @@ public class MinMaxArray {
             arrayMinMax[i] = scan.nextInt();
         }
 
+        double suma = 0;
+        double media;
+
+        for (int i = 0; i < arrayMinMax.length; i++) {
+            suma += arrayMinMax[i];
+        }
+
+        System.out.println("Suma numerilor este egala cu: " + suma);
+
+        media = suma / arrayMinMax.length;
+
+        System.out.println("Media numerilor este egala cu: " + media);
+
         int max = arrayMinMax[0], min = arrayMinMax[0];
+
         for (int i = 0; i < arrayMinMax.length; i++) {
             if (arrayMinMax[i] > max) {
                 max = arrayMinMax[i];
@@ -20,7 +34,20 @@ public class MinMaxArray {
                 min = arrayMinMax[i];
             }
         }
+
+        String minim = "", maxim = "";
+
+        for (int j = 0; j < arrayMinMax.length; j++) {
+            if (arrayMinMax[j] < media) {
+                minim += " " + arrayMinMax[j];
+            } else {
+                maxim += " " + arrayMinMax[j];
+            }
+        }
+
         System.out.println("Numarul minim este: " + min);
         System.out.println("NUmarul maxim este: " + max);
+        System.out.println("numerele mai mici ca media sunt:  " + minim);
+        System.out.println("nemerele mai mari ca media sunt: " + maxim);
     }
 }
